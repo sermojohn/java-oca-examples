@@ -1,0 +1,11 @@
+{
+    "project_name"      : "java-oca-examples",
+    "output_dir"  : "target",
+    "sources_dir" : "src",
+    "resources"   : [],
+    "libs"        : [],
+    "encoding"    : "utf-8",
+
+    "entry_file"        : "Main.java",
+    "entry_point"       : "Main"
+}
