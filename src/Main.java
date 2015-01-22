@@ -1,9 +1,11 @@
 import accessmodifiers.*;
+import scopes.*;
 
 public class Main {
 
 	public static void main(String... args) {
-		testAccessModifiers();
+		// testAccessModifiers();
+		testScopes();
 	}
 
 	private static void testAccessModifiers() {
@@ -22,6 +24,17 @@ public class Main {
 		// instantiate A static nested class
 		new A.ANested();
 		System.out.println("------------END-------------");
+	}
+
+	private static void testScopes() {
+		System.out.println("-----------START------------");
+		ScopeA a = new ScopeA("instance");
+		a.printName("method");
+
+		ScopeB b = new ScopeB("BInstance");
+
+
+		System.out.println("------------END-------------");	
 	}
 	
 }
