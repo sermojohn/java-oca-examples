@@ -1,11 +1,17 @@
 import accessmodifiers.*;
 import scopes.*;
+import arrays.*;
+import dicisionconstructs.*;
+import inheritance.*;
 
 public class Main {
 
 	public static void main(String... args) {
 		// testAccessModifiers();
-		testScopes();
+		// testScopes();
+		// testArrays();
+		// testDecisionConstracts();
+		testInheritance();
 	}
 
 	private static void testAccessModifiers() {
@@ -36,5 +42,39 @@ public class Main {
 
 		System.out.println("------------END-------------");	
 	}
+
+	private static void testArrays() {
+		System.out.println("-----------START------------");
+		
+		ArrayA a = new ArrayA();
+		a.performChecks();
+
+		System.out.println("------------END-------------");	
+	}
+
+	private static void testDecisionConstracts() {
+		System.out.println("-----------START------------");
+		
+		DecisionA a = new DecisionA();
+		//a.testSwitch("1");
+		//a.testFor();
+		// a.testForWithArrays();
+		a.testSwitchWithDefault();
+
+		System.out.println("------------END-------------");	
+	}
 	
+	private static void testInheritance() {
+		// compare output of overriden method getName()
+		ClassA classA = new ClassA("Giannis");
+		classA.getName();
+		ClassA classB = new ClassB("Giannis");
+		classB.getName();
+
+		// and a minor string equality check using ==
+		System.out.println("Names should be equal:"+(classA.name == classB.name));
+
+
+		new TestInterfaces().show();
+	}	
 }
