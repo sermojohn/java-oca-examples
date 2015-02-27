@@ -1,6 +1,6 @@
 package accessmodifiers;
 
-class B {
+public class B {
 
 	/**
 	 * If an empty constructor is defined, this will be called by default from deriving classes' constructors.

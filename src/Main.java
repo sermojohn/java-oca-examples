@@ -3,15 +3,23 @@ import scopes.*;
 import arrays.*;
 import dicisionconstructs.*;
 import inheritance.*;
+import exp.*;
+import strings.*;
+import lambdas.*;
+
+import java.io.*;
 
 public class Main {
 
-	public static void main(String... args) {
-		// testAccessModifiers();
-		// testScopes();
-		// testArrays();
-		// testDecisionConstracts();
+	public static void main(String... args) throws IOException {
+		testAccessModifiers();
+		testScopes();
+		testArrays();
+		testDecisionConstracts();
 		testInheritance();
+		testExceptions();
+		testStrings();
+		testLambdas();
 	}
 
 	private static void testAccessModifiers() {
@@ -66,15 +74,31 @@ public class Main {
 	
 	private static void testInheritance() {
 		// compare output of overriden method getName()
-		ClassA classA = new ClassA("Giannis");
+		/*ClassA classA = new ClassA("Giannis");
 		classA.getName();
 		ClassA classB = new ClassB("Giannis");
 		classB.getName();
 
 		// and a minor string equality check using ==
-		System.out.println("Names should be equal:"+(classA.name == classB.name));
+		System.out.println("Names should be equal:"+(classA.name == classB.name));*/
 
-
+		// interfaces test
 		new TestInterfaces().show();
-	}	
+
+		new InheritanceGenerics().test1();
+	}
+
+	private static void testExceptions() {
+		ExceptionDemo exDemo = new ExceptionDemo();
+		exDemo.method1();
+		exDemo.method2();
+	}
+
+	private static void testStrings() {
+		new StringTest().method1();
+	}
+
+	private static void testLambdas() {
+		new LambdasTest().method1();
+	}
 }

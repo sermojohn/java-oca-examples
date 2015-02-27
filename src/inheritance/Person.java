@@ -17,6 +17,8 @@ public class Person implements Adult, Child {
 	}
 
 	public void work() {
+		// NOTE: will cause an exception due to trying to assign a value to a final variable
+		// Adult.minAge += 1;
 		if(age >= Adult.minAge) {
 			System.out.println("I am an adult so I can go to work!");
 		} else {
