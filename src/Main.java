@@ -6,20 +6,22 @@ import inheritance.*;
 import exp.*;
 import strings.*;
 import lambdas.*;
+import variables.*;
 
 import java.io.*;
 
 public class Main {
 
 	public static void main(String... args) throws IOException {
-		testAccessModifiers();
-		testScopes();
+		// testAccessModifiers();
+		// testScopes();
 		testArrays();
-		testDecisionConstracts();
-		testInheritance();
-		testExceptions();
-		testStrings();
-		testLambdas();
+		// testDecisionConstracts();
+		// testInheritance();
+		// testExceptions();
+		// testStrings();
+		// testLambdas();
+		// testDeclarations();
 	}
 
 	private static void testAccessModifiers() {
@@ -54,8 +56,11 @@ public class Main {
 	private static void testArrays() {
 		System.out.println("-----------START------------");
 		
-		ArrayA a = new ArrayA();
-		a.performChecks();
+		//ArrayA a = new ArrayA();
+		//a.performChecks();
+
+		ArrayClassShowcase b = new ArrayClassShowcase();
+		b.methodA();
 
 		System.out.println("------------END-------------");	
 	}
@@ -92,6 +97,16 @@ public class Main {
 		ExceptionDemo exDemo = new ExceptionDemo();
 		exDemo.method1();
 		exDemo.method2();
+
+		ExceptionImplementation impl1 = new ExceptionImplementation();
+		impl1.exceptionMethod();
+		try {
+		ExceptionInterface impl2 = new ExceptionImplementation();
+		impl2.exceptionMethod();
+		}
+		catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 
 	private static void testStrings() {
@@ -100,5 +115,9 @@ public class Main {
 
 	private static void testLambdas() {
 		new LambdasTest().method1();
+	}
+
+	private static void testDeclarations() {
+		new DeclarationOrder().printValues();
 	}
 }
