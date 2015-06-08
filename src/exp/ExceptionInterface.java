@@ -1,5 +1,7 @@
 package exp;
 
 public interface ExceptionInterface {
-	public void exceptionMethod() throws Exception;
+	public void exceptionMethodA() throws Exception;
+
+	public void exceptionMethodB();
 }

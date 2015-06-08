@@ -15,9 +15,9 @@ public class Main {
 	public static void main(String... args) throws IOException {
 		// testAccessModifiers();
 		// testScopes();
-		testArrays();
+		// testArrays();
 		// testDecisionConstracts();
-		// testInheritance();
+		testInheritance();
 		// testExceptions();
 		// testStrings();
 		// testLambdas();
@@ -91,6 +91,8 @@ public class Main {
 		new TestInterfaces().show();
 
 		new InheritanceGenerics().test1();
+
+		new GrandChild();
 	}
 
 	private static void testExceptions() {
@@ -98,15 +100,18 @@ public class Main {
 		exDemo.method1();
 		exDemo.method2();
 
+		//interface defines method that throws exception, but implementation doesn't
 		ExceptionImplementation impl1 = new ExceptionImplementation();
-		impl1.exceptionMethod();
+		impl1.exceptionMethodA();
 		try {
-		ExceptionInterface impl2 = new ExceptionImplementation();
-		impl2.exceptionMethod();
-		}
-		catch (Exception e) {
+			ExceptionInterface impl2 = new ExceptionImplementation();
+			impl2.exceptionMethodA();
+		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
+
+		ExceptionImplementation impl2 = new ExceptionImplementation();
+		impl2.exceptionMethodB();
 	}
 
 	private static void testStrings() {

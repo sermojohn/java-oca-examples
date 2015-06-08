@@ -12,7 +12,7 @@ public class ExceptionDemo {
 
 		boolean flag = false;
 		for(;flag=!flag;) {
-			System.out.println("test");
+			System.out.println("test1");
 		}
 
 		int a = 10;
@@ -29,7 +29,7 @@ public class ExceptionDemo {
 		int bang = 1;
 		do {
 			{
-				System.out.println("testsssss");
+				System.out.println("test2");
 			}
 		}
 		while (bang < 1);
